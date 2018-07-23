@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--/* see google fonts to add in your website*/-->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Merienda" rel="stylesheet">
+    <title>Emobilis Website</title>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+
+    <style>
+        #top{/*we have defined an ID for the Heading for our website and we called it top.Now we want to add CSS code for the top attribute*/
+            font-family: 'Merienda', cursive;
+            background: #74a8c0;/*inserts a background color to the top DiV*/
+            height: 80px;/* increases the height of the Div*/
+            display: flex;/*A flex container expands items to fill available free space, or shrinks them to prevent overflow. Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based)*/
+            align-items: center;/* aligns the contents at the center  of the div vertically*/
+            justify-content:center;/* aligns the contents horizontally*/
+            position: fixed;
+            top:0;
+            width: 100%;
+
+        }
+        body{
+            padding: 0; /* removes white spaces*/
+            margin: 0;
+        }
+        ul{
+            list-style: none;/* removes bullets*/
+
+        }
+        li{
+            display: inline-block;/* align text horizontally*/
+            margin-right: 12px; /* moves the items relative to the margin*/
+        }
+        #top a{/*targets only the a within the div*/
+            text-decoration: none;
+            color: #62d6ff;
+            font-size: 1.5em;
+        }
+        #top a:hover{/* only shows when you over the items*/
+            color: red;
+            border-bottom: 1px solid red;/* inserts a line below the hovered*/
+        }
+
+        /*styles for all sections*/
+        .website/* use dot to select the class*/
+        {
+            height: 100vh; /* its the vertical height 100 is  a percentage*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /*styles for the home section*/
+        #home{
+           background:url("images/img5.jpg") grey;
+            color: yellow;
+            background-repeat: no-repeat;
+            background-clip: border-box;
+            background-position: center;
+        }
+        .website h2,p{
+            text-align: center;
+            font-family: 'Lobster', cursive;
+        }
+        #contact{
+            background: #34b9ff;
+            color: darkolivegreen;
+        }
+
+        #about{
+            background: #dffffc;
+            color: lightslategray;
+        }
+        #products{
+            background:pink;
+            color: darkkhaki;
+            justify-content: space-around;
+        }
+        #products .item{ /* to target the class inside th products*/
+            width:24%;
+            background: #dade13;
+            padding-bottom: 14px;/* the distance between the edge and the content*/
+        }
+        #products img{ /* it target the image attribute*/
+            width:100%;
+        }
+        #products h2,p{
+            margin:0;
+        }
+        #products h2{
+            border-bottom: 1px solid white;
+            margin-bottom: 10px;
+        }
+        #products .item:hover{
+            background-color: grey;
+            color: white;
+            border-bottom: white dotted 5px;
+            transition: background-color 5s,color 5s;
+        }
+        /* The animation code */
+        @keyframes example {
+            from {background-color: silver;}
+            to {background-color: gold;}
+        }
+        #top a:hover{
+            animation-name: example;
+            animation-duration: 10s;
+        }
+        .form{
+            width: 30%;
+            border: 1px solid white;
+            padding: 20px;
+        }
+        .form input,textarea,button{
+            width: 100%;
+            margin-bottom: 12px;
+            box-sizing: border-box;/* it makes fit within the box*/
+
+        }
+        .form input,button{
+            padding-top: 8px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+        }
+        .form button{
+            background: #ffdfe3;
+            border: 2px dotted black;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .boxes{
+            border: 1px solid grey;
+            width: 48%;
+            padding: 12px;
+            box-sizing: border-box;
+            text-align: justify;
+            color: #4b07ff;
+        }
+        .boxes  p{
+            text-align: justify;
+        }
+        .boxes h3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="top">
+   <ul>
+       <li>
+           <a data-scroll href="#home">Home</a>
+       </li>
+       <li>
+           <a data-scroll href="#about">About</a>
+       </li>
+       <li>
+           <a data-scroll href="#contact">Contact Us</a>
+       </li>
+       <li>
+           <a data-scroll href="#products">Products</a>
+       </li>
+       <li>
+           <a data-scroll href="#register">Registration</a>
+       </li>
+   </ul>
+</div>
+<!--Home section-->
+<div id="home" class="website">
+<div>
+        <h2>Welcome to Emobilis official Website</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aperiam autem consectetur deleniti eius eum fuga hic labore libero maxime natus nulla placeat quae quaerat qui, suscipit tempora, voluptatem voluptatum?</p>
+</div>
+</div>
+
+<!--about-->
+<div id="about" class="website">
+    <div>
+        <h2>Welcome to Emobilis official Website</h2>
+        <div class="container">
+            <div class="boxes">
+                <h3>Curriculum</h3>
+                <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda corporis, ea eius expedita in laudantium minus officia quasi quisquam quod ratione repellat sint voluptate voluptatem! Deserunt eius inventore sapiente!</p>
+            </div>
+            <div class="boxes">
+                <h3 >Fees  Structure</h3>
+                <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet error iste nobis nulla numquam possimus quo reprehenderit tempora vitae! Ab amet consequuntur eos esse et nam odit rem, sunt unde?</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--contact-->
+<div id="contact" class="website">
+    <div class="form">
+        <form action="">
+            <input type="text" placeholder="Enter your Names">
+            <input type="email" placeholder="Enter your email Address">
+            <input type="tel" placeholder="Enter your Mobile Number">
+            <textarea  rows="5" placeholder="Describe your Academic background"></textarea>
+            <button>SUBMIT</button>
+        </form>
+    </div>
+</div>
+<!--Products-->
+<div id="products" class="website">
+    <div class="item">
+        <img src="images/img1.jpg" alt="">
+        <h2>class of 2018</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid architecto, culpa cumque dicta, dolores illum ipsam magni mollitia perspiciatis sapiente similique soluta, ut! Dolore neque obcaecati quam quisquam recusandae.</p>
+    </div>
+    <div class="item">
+        <img src="images/img2.jpg" alt="">
+        <h2>Support Staff</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi doloribus, eos illum iste magni maxime molestiae molestias, pariatur perspiciatis sapiente, voluptatum! Aliquam aut deleniti dolores earum excepturi provident sunt.</p>
+    </div>
+    <div class="item">
+        <img src="images/img3.jpg" alt="">
+        <h2>Support Staff</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi doloribus, eos illum iste magni maxime molestiae molestias, pariatur perspiciatis sapiente, voluptatum! Aliquam aut deleniti dolores earum excepturi provident sunt.</p>
+    </div>
+    <div class="item">
+        <img src="images/img4.jpg" alt="">
+        <h2>Board Members</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur deserunt dignissimos dolor eligendi exercitationem explicabo illo iure minus mollitia omnis quidem quo, repellendus veniam voluptates. Autem dicta et ipsum?</p>
+    </div>
+
+</div>
+<div id="register" class="website">
+
+</div>
+<p class="kenya nairobi"></p>
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+</body>
+</html>
