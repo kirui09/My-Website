@@ -4,5 +4,5 @@
 
 <h3>Sample Screenshots</h3>
 
-<img src="images/readme1.PNG"/>
-<img src="images/readme2.PNG"/>
+<img src="images/readme1.PNG">
+<img src="images/readme2.PNG">
